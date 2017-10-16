@@ -1,4 +1,16 @@
 
+//create the canvas
+var c = document.createElement("canvas"); 
+c.width = "560";
+c.height = "280";
+c.style = "border:1px solid #000000;";
+
+//create score and status divs
+var scoreOut = document.createElement("div");
+scoreOut.setAttribute('id', 'scoreOut');
+var gameStatus = document.createElement("div");
+gameStatus.setAttribute('id', 'status');
+
 //set up global variables
 var scoreMain = 0;
 var scoreMove = 1;
@@ -8,8 +20,12 @@ var blockSize = 20;
 var timerTick = 85;
 var snakeTails = [];
 //get the canvas that we set up above to draw on
-var c = document.getElementById("myCanvas");
+//var c = document.getElementById("myCanvas");
 var board = c.getContext("2d");
+//load visible elements
+document.getElementById("gameDiv").appendChild(c);
+document.getElementById("gameDiv").appendChild(scoreOut);
+document.getElementById("gameDiv").appendChild(gameStatus);
 //useful positioning
 var centerWidth = c.width / 2;
 var centerHeight = c.height / 2;
