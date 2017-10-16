@@ -15,7 +15,7 @@
     <!-- set up canvas -->
     <canvas id="myCanvas" width="560" height="280" style="border:1px solid #000000;"></canvas>
     <!-- now Javascript -->
-    <script>
+    <script type = "text/javascript">
         function Snake() {
             //set up global variables
             var scoreMain = 0;
@@ -259,10 +259,14 @@
     </script>
 </head>
 
-<body onload="Snake();">
+<body>
     <!-- Sets up divs for score output and game over text -->
     <div id="scoreOut"> </div>
     <div id="status"> </div>
+
+    <script type="text/javascript">
+        Snake();
+    </script>
 </body>
 
 </html>
